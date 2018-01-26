@@ -29,7 +29,7 @@ app.get('/', (req, res)=>{
   var log = `${now}: ${req.method} ${req.url} \n ip: ${req.ip}`;
   var data = req.headers['user-agent'];
   var log2 = `ip: ${req.ip}`
-  fs.appendFile(server2.log, log, (err)=>{
+  fs.appendFile('server2.log', log, (err)=>{
     if(err)
       console.log("failed to append log2");
   })
