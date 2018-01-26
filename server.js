@@ -5,6 +5,7 @@ const fs = require('fs')
 const ipdata = require('./ipdata.js');
 
 const port = process.env.PORT || 3000;
+
 var app = express();
 hbs.registerPartials(__dirname+ '/views/partials')
 hbs.registerHelper('getCurrentYear', ()=>{
