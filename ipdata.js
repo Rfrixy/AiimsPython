@@ -2,7 +2,6 @@ const request = require('request');
 
 var ipData = (address, callback) =>{
   var encodedAddress = encodeURIComponent(address);
-  console.log("Called me "+address);
   request( {
     url: `http://ip-api.com/json/${address}`,
     json: true

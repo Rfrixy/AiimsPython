@@ -29,23 +29,14 @@ app.get('/', (req, res)=>{
   var log = `${now}: ${req.method} ${req.url} \n ip: ${req.ip}`;
   var data = req.headers['user-agent'];
   var log2 = `ip: ${req.ip}`
-  fs.appendFile('server2.log', log, (err)=>{
-    if(err)
-      console.log("failed to append log2");
-  })
-  ipdata.ipData('123.212.18.105',(errorMessage,results)=>{
+
+  ipdata.ipData(req.ip,(errorMessage,results)=>{
     if(errorMessage){
       console.log(errorMessage);
-      fs.appendFile('server.log',log + '\n' + data + '\n', (err)=>{
-        if(err)
-          console.log('Unable to append to server log');
-      })
     }else{
-      fs.appendFile('server.log',log + '\n' + data + '\n' + results.as + " | " + results.city + '\n', (err)=>{
-        if(err)
-          console.log('Unable to append to server log');
-      })
+      console.log(log + '\n' + data + '\n' + results.as + " | " + results.city + '\n');
     }
+    console.log("=============================");
   });
 
 
