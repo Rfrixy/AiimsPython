@@ -1,0 +1,41 @@
+.flex-container {
+  display: flex;
+}
+
+body{
+  text-align: center;
+}
+
+body ul{
+  margin-top: 2em;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #606c76;
+}
+
+.navbar li {
+    float: center;
+    display: inline-flex;
+    margin-bottom: 0;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #ab5dda;
+}
